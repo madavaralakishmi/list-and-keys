@@ -23,9 +23,9 @@ const App = () => (
   <div className="list-container">
     <h1 className="title">User List</h1>
     <ul>
-      <UserProfile userDetails={userDetailsList[0]} />
-      <UserProfile userDetails={userDetailsList[1]} />
-      <UserProfile userDetails={userDetailsList[2]} />
+      {userDetailsList.map(eachItem => (
+        <UserProfile userDetails={eachItem} />
+      ))}
     </ul>
   </div>
 )
